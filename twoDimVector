@@ -1,0 +1,63 @@
+public class twoDimVector
+{
+	double x;
+	double y;
+	double constant;
+	
+	public twoDimVector(){}
+	
+	public twoDimVector(double x, double y)
+	{
+		this.x = x;
+		this.y = y;
+	}
+	
+	public String toString()
+	{
+		return "<" + this.x + ", " + this.y +">";
+	}
+	
+	public twoDimVector add(twoDimVector two)
+	{
+		x = this.x + two.x;
+		y = this.y + two.y;
+		
+		return new twoDimVector(x, y);
+	}
+	
+	public twoDimVector subtract(twoDimVector two)
+	{
+		x = this.x - two.x;
+		y = this.y - two.y;
+		
+		return new twoDimVector(x, y);
+	}
+	
+	public twoDimVector multiplyByConstant(double constant)
+	{
+		x = this.x * constant;
+		y = this.y * constant;
+		
+		return new twoDimVector(x, y);
+	}
+	
+	public double dotProduct(twoDimVector two)
+	{
+		 return (this.x * two.x) + (this.y * two.y);
+	}
+	
+	public double getxValue()
+	{
+		return this.x;
+	}
+	
+	public double getyValue()
+	{
+		return this.y;
+	}
+	
+	public boolean equals(twoDimVector two)
+	{
+		return this.x == two.x && this.y == two.y;
+	}
+}
